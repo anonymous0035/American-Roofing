@@ -104,7 +104,7 @@ export const useLeadStore = create<LeadStore>()(
 
       deleteLead: async (_id) => {
         try {
-          await fetch(`${backend_url}api/deletecontact`, {
+          await fetch(`${backend_url}/api/deletecontact`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

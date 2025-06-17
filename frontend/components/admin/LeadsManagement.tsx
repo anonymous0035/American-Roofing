@@ -15,13 +15,12 @@ export default function LeadsManagement() {
   const [statusFilter, setStatusFilter] = useState("all")
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
   const [isLoading, setIsLoading] = useState(false)
-  const backend_url = process.env.BACKEND_URL
 
   // Move fetchLeads function outside useEffect
   const fetchLeads = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch(`${backend_url}/api/get-all-leads`)
+      const response = await fetch("https://backend-ten-teal-82.vercel.app/api/get-all-leads")
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`)
       }

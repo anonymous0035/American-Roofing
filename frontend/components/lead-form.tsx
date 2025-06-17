@@ -147,8 +147,7 @@ export default function LeadForm() {
 
       // Try to send data to backend API (optional)
       try {
-        const backend_url = process.env.BACKEND_URL;
-        const response = await fetch(`${backend_url}/api/contact`, {
+        const response = await fetch("https://backend-ten-teal-82.vercel.app/api/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

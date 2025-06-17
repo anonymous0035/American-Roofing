@@ -147,7 +147,8 @@ export default function LeadForm() {
 
       // Try to send data to backend API (optional)
       try {
-        const response = await fetch("http://localhost:8080/api/contact", {
+        const backend_url = process.env.BACKEND_URL;
+        const response = await fetch(`${backend_url}/api/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

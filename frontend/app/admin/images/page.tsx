@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { useAppDispatch } from "@/lib/redux/hooks"
 import { initializeContent } from "@/lib/redux/slices/contentSlice"
 import { Toaster } from "@/components/ui/toaster"
-import ImageManagement from "@/components/admin/ImageManagement"
+import ImageManagement from "@/components/admin/real-time-image-dashboard"
 
 export default function ImagesPage() {
   const dispatch = useAppDispatch()
